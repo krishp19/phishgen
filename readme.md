@@ -1,76 +1,78 @@
-# 🎣 Phishing Page Generator (For Educational Use Only)
+================================================================================
+          Phishing Page Generator (For Educational Use Only)
+================================================================================
 
-Clone any public login page (e.g., Facebook, Instagram) **locally** and **simulate credential capture** for educational, awareness, and ethical testing purposes only.
+Clone a public login page (e.g., Facebook, Instagram) locally to simulate credential
+capture for educational, awareness, and ethical testing purposes only.
 
-> ❗ This tool is meant **strictly for local use**, CTF practice, cybersecurity research, or raising awareness about phishing threats.  
-> **Never deploy publicly or use it maliciously.**
+!!! WARNING !!!
+This tool is strictly for LOCAL USE, CTF practice, cybersecurity research, or raising
+awareness about phishing threats. NEVER deploy publicly or use maliciously.
 
----
+================================================================================
+Features
+================================================================================
 
-## 📸 Features
+- Clone login page HTML, CSS, and JS
+- Rewrite form actions to a local listener
+- Download external assets (CSS, JS, images) to a local assets/ folder
+- Simulate credential harvesting with a Python Flask server
+- Ideal for safe phishing technique demos
 
-- 🧪 Clone any login page’s **HTML + CSS + JS**
-- 🛠 Automatically rewrites `<form>` actions to local listener
-- 📦 Downloads all external assets (CSS, JS, images) into local `assets/`
-- 📥 Simulates credential harvesting using a local Python Flask server
-- 💻 Perfect for demonstrating phishing techniques in a safe environment
+================================================================================
+How to Use
+================================================================================
 
----
+1. Install Dependencies
+   Run: pip install -r requirements.txt
 
-## 🚀 How to Use
+2. Generate the Phishing Page
+   Run: python generate.py --url https://example.com/login
 
-### 1. 📦 Install Dependencies
+   Output structure:
+   output/
+   ├── index.html         (cloned login page, works locally)
+   ├── server.py          (credential listener script)
+   └── assets/            (cloned CSS, JS, images)
 
-```bash
-pip install -r requirements.txt
-2. 🔗 Run the Generator
-bash
-Copy
-Edit
-python generate.py --url https://example.com/login
-This will create a folder like:
+3. Simulate Phishing Locally
+   Run: cd output
+        python server.py
+   Open index.html in a browser, submit the form, and view credentials in the terminal.
 
-pgsql
-Copy
-Edit
-output/
-├── index.html         ← cloned login page (locally working)
-├── server.py          ← simple listener script
-└── assets/            ← CSS/JS/images cloned from target site
-3. 🧪 Simulate Local Phishing
-Run the local listener:
+================================================================================
+Configuration
+================================================================================
 
-bash
-Copy
-Edit
-cd output
-python server.py
-Then open index.html in a browser and submit the form.
-The credentials will be printed in your terminal.
+Flags:
+  --url          URL of the login page to clone
+  --output       Output directory (default: output)
 
-⚙️ Configuration
+Customize:
+  - TARGET_ACTION in generate.py for form submission endpoint
+  - LISTENER_SCRIPT in server.py for logging or saving behavior
 
-Flag	Description
---url	URL of the login page to clone
---output	Output directory (default: output)
-You can also modify:
+================================================================================
+Example Use Cases (Safe & Ethical)
+================================================================================
 
-TARGET_ACTION in generate.py to customize where the form submits
+- Run phishing simulations for cyber awareness workshops
+- Study login form mechanics
+- Practice red team tactics in labs or CTF competitions
 
-The LISTENER_SCRIPT for custom logging or saving behavior
+================================================================================
+Disclaimer
+================================================================================
 
-✅ Example Use Case (Safe Testing)
-✅ Simulate phishing for an internal cyber awareness workshop
+This tool is for EDUCATIONAL and RESEARCH purposes only. Do NOT use on websites you
+do not own or have explicit permission to test. The authors are not responsible for
+any misuse or damage caused.
 
-✅ Analyze how login forms work
+================================================================================
+Author
+================================================================================
 
-✅ Practice safe red team tactics in labs or CTF competitions
-
-⚠️ Disclaimer
-This tool is provided for educational and research purposes only.
-Do NOT use this tool on websites you do not own or have explicit permission to test.
-The authors are not responsible for any misuse or damage caused.
-
-👨‍💻 Author
 Krish Prasad
-Cybersecurity enthusiast & full-stack developer
+Cybersecurity Enthusiast & Full-Stack Developer
+
+================================================================================
