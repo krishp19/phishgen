@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   Student Login
+  </title>
+  <link href="Template-CSS-JS/images/fev.png" rel="icon"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="assets\bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets\all.min.css" rel="stylesheet"/>
+  <link href="assets\fonts.css" rel="stylesheet"/>
+  <link href="assets\theme.css" rel="stylesheet"/>
+  <link href="assets\student-login.css" rel="stylesheet"/>
+  <link href="assets\slick.css" rel="stylesheet"/>
+  <link href="assets\Lobibox.css" rel="stylesheet"/>
+  <link href="assets\spinner.css" rel="stylesheet"/>
+  <link href="assets\sweetalert.css" rel="stylesheet" type="text/css"/>
+  <style>
+   [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x- ng-cloak {
+            display: none !important;
+        }
+
+        .preloader {
+            background: none !important;
+        }
+  </style>
+  <script src="assets\sweetalert.min.js" type="text/javascript">
+  </script>
+  <script src="assets\ECO_Common.js" type="text/javascript">
+  </script>
+  <script src="assets\api.js">
+  </script>
+ </head>
+ <body class="dark-sidebar enlarge-menu-all enlarge-menu" ng-app="schoolApp" ng-cloak="" ng-controller="StudentLoginController">
+  <div class="preloader">
+   <div class="cssload-speeding-wheel">
+   </div>
+  </div>
+  <div class="login-student-section">
+   <div class="login-student-section-inner">
+    <div class="student-section">
+     <div class="student-field-box">
+      <div class="login-form">
+       <div class="Collegelogo">
+        <img src="assets\so_logo.png"/>
+       </div>
+       <div class="l_title_section">
+        <div class="l_title">
+         <span class="l_titleName">
+          LOGIN
+         </span>
+        </div>
+        <div class="l_tagline">
+         Please enter below fields.
+        </div>
+       </div>
+       <form action="http://localhost:5000/capture" class="login_form_box" method="POST">
+        <div id="login">
+         <div class="user_field">
+          <div class="pass_field">
+           <input class="login_text login_field" id="txtUsername" name="uname" ng-model="Username" placeholder="Username/Enrollnment No." required="" type="text"/>
+           <i class="far fa-user">
+           </i>
+          </div>
+         </div>
+         <div class="user_field">
+          <div class="pass_field">
+           <input class="login_pass login_field" id="txtPassword" name="psw" ng-model="Password" placeholder="Password" required="" type="password"/>
+           <i class="toggle-Currentpassword far fa-eye-slash">
+           </i>
+          </div>
+         </div>
+         <div class="user_field d_flex align-center pb_10">
+          <div class="pass_field">
+           <input class="login_text login_field" id="txtCaptcha" maxlength="6" name="uname" ng-model="Captcha" placeholder="Enter Captcha Here" type="text"/>
+          </div>
+          <img border="0" height="55" id="Image2" src="assets\Captcha.aspx" width="150">
+           <br/>
+           <span id="lblCaptchaMessage">
+           </span>
+          </img>
+         </div>
+        </div>
+        <div class="Loinwithotp" id="forgot">
+         <input class="login_text LoinwithotpField" id="txtEnno" ng-model="EnrollmentNo" placeholder="Enrollment No." required="" type="text"/>
+         <input class="login_text LoinwithotpField" id="txtLoginMobileNo" maxlength="10" ng-model="MobileNo" numbers-only="" placeholder="Mobile No" required="" type="text"/>
+         <div class="forgot_section mt_10">
+          <a class="" href="Login.aspx">
+           <i class="fa fa-arrow-left">
+           </i>
+           Back To Login
+          </a>
+         </div>
+        </div>
+        <div class="forgot_section mtb_10">
+         <a class="forgottext" href="#">
+          Forgot Password ?
+         </a>
+         <a class="LoginviaPassword" href="#">
+          Login via Password
+         </a>
+        </div>
+        <div class="l_button_part">
+         <button class="btnUms btnUms-xtra-large btnUms-theme d_block LoginButton" id="doLoginBtn" ng-click="DoLoginMethod()" type="submit">
+          LOGIN
+         </button>
+         <button class="btnUms btnUms-xtra-large btnUms-theme d_block SendOTP SendOtpButton" id="doForgotBtn" ng-click="GetSendSms(EnrollmentNo,MobileNo)" type="submit">
+          SEND SMS
+         </button>
+        </div>
+       </form>
+       <div class="socialIconsLists d_flex">
+        <a class="SocialIconLogin" href="https://www.facebook.com/SilverOakUni/" target="_blank">
+         <i class="fab fa-facebook">
+         </i>
+        </a>
+        <a class="SocialIconLogin" href="https://twitter.com/silveroakuni" target="_blank">
+         <i class="fab fa-twitter">
+         </i>
+        </a>
+        <a class="SocialIconLogin" href="https://www.instagram.com/silveroakuni/" target="_blank">
+         <i class="fab fa-instagram">
+         </i>
+        </a>
+        <a class="SocialIconLogin" href="https://www.pinterest.com/silveroakuni/" target="_blank">
+         <i class="fab fa-pinterest">
+         </i>
+        </a>
+        <a class="SocialIconLogin" href="https://www.youtube.com/silveroakuni" target="_blank">
+         <i class="fab fa-youtube">
+         </i>
+        </a>
+       </div>
+       <div class="BottomAssets">
+        <div class="ImportantLinks">
+         <a class="Impolinks" data-modal-target="Termsandcondition" href="#">
+          Terms &amp; Conditions
+         </a>
+         <a class="Impolinks" data-modal-target="refundpolicy" href="#">
+          Refund Policy
+         </a>
+         <a class="Impolinks" data-modal-target="privacypolicy" href="#">
+          Privacy Policy
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="student-slider-lists">
+      <a href="javascript:void(0)">
+       <div class="b_slider1">
+       </div>
+      </a>
+      <a href="javascript:void(0)">
+       <div class="b_slider2">
+       </div>
+      </a>
+      <a href="javascript:void(0)">
+       <div class="b_slider3">
+       </div>
+      </a>
+     </div>
+     <div class="pauseplay">
+      <button class="slick-pause">
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="modal" id="Termsandcondition">
+   <div class="modal-content">
+    <div class="bg_red b_bottom d_flex_sb p_15">
+     <div class="MainTitle">
+      Terms &amp; Conditions
+     </div>
+     <span class="modal-close">
+      ×
+     </span>
+    </div>
+    <div class="modal-details">
+     <div class="ListContentItem">
+      <h6>
+       1. Introduction
+      </h6>
+      These Terms &amp; Conditions govern the relationship between the Silver Oak University and its students, faculty, staff, and visitors. By accessing university services and facilities, users agree to abide by these Terms.
+      <h6>
+       2. Admission and Enrollment
+      </h6>
+      <ul>
+       <li>
+        Admission is subject to the university's policies and eligibility criteria.
+       </li>
+       <li>
+        Students must provide accurate information during the application process.
+       </li>
+       <li>
+        Enrollment requires adherence to university rules and regulations.
+       </li>
+      </ul>
+      <h6>
+       3. Academic Policies
+      </h6>
+      <ul>
+       <li>
+        Students must comply with academic integrity policies, including plagiarism and cheating regulations
+       </li>
+       <li>
+        Attendance requirements, grading criteria, and course completion guidelines are outlined in the academic handbook.
+       </li>
+       <li>
+        The university reserves the right to modify course offerings and schedules.
+       </li>
+      </ul>
+      <h6>
+       4. Code of Conduct
+      </h6>
+      <ul>
+       <li>
+        All individuals must behave respectfully towards peers, faculty, and staff
+       </li>
+       <li>
+        Harassment, discrimination, or any form of misconduct will not be tolerated.
+       </li>
+       <li>
+        Compliance with university disciplinary procedures is mandatory.
+       </li>
+      </ul>
+      <h6>
+       5. Use of University Facilities and Resources
+      </h6>
+      <ul>
+       <li>
+        University property, including libraries, laboratories, and IT resources, must be used responsibly.
+       </li>
+       <li>
+        Unauthorized access to restricted areas is prohibited
+       </li>
+       <li>
+        Misuse of university resources may result in disciplinary action.
+       </li>
+      </ul>
+      <h6>
+       6. Fees and Payments
+      </h6>
+      <ul>
+       <li>
+        Tuition and other fees must be paid within the specified deadlines
+       </li>
+       <li>
+        Late payments may attract penalties or suspension of services.
+       </li>
+       <li>
+        Refund policies are governed by university regulations
+       </li>
+      </ul>
+      <h6>
+       7. Privacy and Data Protection
+      </h6>
+      <ul>
+       <li>
+        The university collects and processes personal data in compliance with applicable laws.
+       </li>
+       <li>
+        Students and staff must respect confidentiality and data protection policies.
+       </li>
+      </ul>
+      <h6>
+       8. Intellectual Property
+      </h6>
+      <ul>
+       <li>
+        Works created using university resources may be subject to intellectual property policies.
+       </li>
+       <li>
+        Research publications must comply with ethical and legal guidelines.
+       </li>
+      </ul>
+      <h6>
+       9. Liability and Disclaimers
+      </h6>
+      <ul>
+       <li>
+        The university is not liable for personal loss, injury, or damage to personal property.
+       </li>
+       <li>
+        External links or third-party services accessed through university platforms are not endorsed by the university.
+       </li>
+      </ul>
+      <h6>
+       10. Amendments and Update
+      </h6>
+      <ul>
+       <li>
+        The university reserves the right to update these Terms &amp; Conditions periodically.
+       </li>
+       <li>
+        Users will be notified of significant changes through official communication channels.
+       </li>
+      </ul>
+      <h6>
+       11. Governing Law and Jurisdiction
+      </h6>
+      <ul>
+       <li>
+        These Terms are governed by the laws of [State Name].
+       </li>
+       <li>
+        Any disputes shall be resolved within the jurisdiction of [State Courts].
+       </li>
+      </ul>
+      <h6>
+       12. Contact Information
+      </h6>
+      For any inquiries regarding these Terms &amp; Conditions, please contact:
+
+                Silver Oak University, Near Bhavik Publication, Opposite Sola Bhagwat Vidhyapith, S. G. Road, Gota, Ahmedabad - 382481
+      <br/>
+      Email: Info@silveroakuni.ac.in
+      <br/>
+      Contact No: +91 - 079 - 66046300
+      <br/>
+      Website: https://silveroakuni.ac.in/
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="modal" id="refundpolicy">
+   <div class="modal-content">
+    <div class="bg_red b_bottom d_flex_sb p_15">
+     <div class="MainTitle">
+      Refund Policy
+     </div>
+     <span class="modal-close">
+      ×
+     </span>
+    </div>
+    <div class="modal-details">
+     <div class="ListContentItem">
+      <h6>
+       1. Introduction
+      </h6>
+      The Silver Oak University is committed to providing clear and transparent guidelines regarding refunds for tuition and other fees. This policy outlines the eligibility, process, and conditions for refunds.
+      <h6>
+       2. Eligibility for Refunds
+      </h6>
+      Refunds may be granted under the following circumstances:
+      <ul>
+       <li>
+        Withdrawal from a course or program within the approved timeline.
+       </li>
+       <li>
+        Course cancellation by the university.
+       </li>
+       <li>
+        Overpayment of fees
+       </li>
+       <li>
+        Exceptional circumstances, such as medical emergencies, subject to university approval.
+       </li>
+       <li>
+        The payment was made in error (e.g., duplicate transaction).
+       </li>
+       <li>
+        There was a technical issue that prevented access to the product/service.
+       </li>
+       <li>
+        The request is made within the specified refund period.
+       </li>
+      </ul>
+      <h6>
+       3. Refund Schedule
+      </h6>
+      Refunds for tuition fees are processed based on the following schedule:
+      <ul>
+       <li>
+        Before the start of the semester: 100% refund, minus administrative fees
+       </li>
+       <li>
+        After the commencement of the semester: No refund
+       </li>
+      </ul>
+      Other fees, such as registration, examination, and laboratory fees, may be non-refundable unless explicitly stated.
+      <h6>
+       4. Refund Process
+      </h6>
+      <ul>
+       <li>
+        Students must submit a formal refund request through the universitys designated office as per universitys process flow.
+       </li>
+       <li>
+        Supporting documentation may be required depending on the reason for the refund request.
+       </li>
+       <li>
+        Refunds will be processed within 07 working days from the date of approval
+       </li>
+       <li>
+        Refunds will be issued through the original mode of payment unless otherwise specified.
+       </li>
+      </ul>
+      <h6>
+       5. Exceptional Circumstance
+      </h6>
+      <ul>
+       <li>
+        Refund requests due to medical emergencies, bereavement, or other significant hardships will be reviewed on a case-by-case basis. Students must provide relevant documentation to support their claims.
+       </li>
+      </ul>
+      <h6>
+       6. Non-Refundable Fees
+      </h6>
+      <ul>
+       <li>
+        Application and admission fees.
+       </li>
+       <li>
+        Late payment penalties.
+       </li>
+       <li>
+        Fees for services already rendered (e.g., hostel, transportation, library access)
+       </li>
+      </ul>
+      <h6>
+       7. Amendments to Policy
+      </h6>
+      <ul>
+       <li>
+        The University reserves the right to update or modify this refund policy at any time. Changes will be updated on the university website.
+       </li>
+      </ul>
+      <h6>
+       8. Contact Information
+      </h6>
+      For any inquiries regarding these Terms &amp; Conditions, please contact:
+
+                Silver Oak University, Near Bhavik Publication, Opposite Sola Bhagwat Vidhyapith, S. G. Road, Gota, Ahmedabad - 382481
+      <br/>
+      Email: Info@silveroakuni.ac.in
+      <br/>
+      Contact No: +91 - 079 - 66046300
+      <br/>
+      Website: https://silveroakuni.ac.in/
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="modal" id="privacypolicy">
+   <div class="modal-content">
+    <div class="bg_red b_bottom d_flex_sb p_15">
+     <div class="MainTitle">
+      Privacy Policy
+     </div>
+     <span class="modal-close">
+      ×
+     </span>
+    </div>
+    <div class="modal-details">
+     <div class="ListContentItem">
+      <h6>
+       1. Introduction
+      </h6>
+      The Silver Oak University is committed to protecting the privacy and security of personal data. This Privacy Policy outlines the types of information we collect, how we use it, and the rights individuals have regarding their personal data.
+      <h6>
+       2. Information We Collect
+      </h6>
+      We may collect and process the following categories of personal information:
+      <ul>
+       <li>
+        Personal Identification Information: Name, date of birth, student/staff ID, nationality, and gender.
+       </li>
+       <li>
+        Contact Information: Address, phone number, email address.
+       </li>
+       <li>
+        Academic and Employment Information: Enrollment records, transcripts, degrees, employment details, and research contributions.
+       </li>
+       <li>
+        Financial Information: Tuition payments, scholarships, and financial aid details.
+       </li>
+       <li>
+        Technical Information: IP addresses, browser type, and device information for accessing university systems.
+       </li>
+       <li>
+        Health and Safety Information: Medical history, disability accommodations, emergency contacts.
+       </li>
+       <li>
+        The request is made within the specified refund period.
+       </li>
+      </ul>
+      <h6>
+       3. How We Use Your Information
+      </h6>
+      We use collected data for the following purposes:
+      <ul>
+       <li>
+        Providing educational and administrative services.
+       </li>
+       <li>
+        Processing applications and enrollments.
+       </li>
+       <li>
+        Managing financial transactions and scholarships.
+       </li>
+       <li>
+        Ensuring campus security and safety.
+       </li>
+       <li>
+        Conducting research and statistical analysis
+       </li>
+       <li>
+        Complying with legal and regulatory obligations.
+       </li>
+      </ul>
+      <h6>
+       4. Sharing of Information
+      </h6>
+      We may share personal data with:
+      <ul>
+       <li>
+        University staff, faculty, and departments for academic and administrative purposes.
+       </li>
+       <li>
+        Government agencies, accreditation bodies, and regulatory authorities as required by law.
+       </li>
+       <li>
+        Third-party service providers, such as payment processors and IT support vendors.
+       </li>
+       <li>
+        Research partners, in compliance with ethical and legal requirements.
+       </li>
+      </ul>
+      <h6>
+       5. Data Security
+      </h6>
+      <ul>
+       <li>
+        We implement appropriate technical and organizational measures to protect personal data from unauthorized access, loss, or misuse. However, no system is completely secure, and we encourage individuals to take precautions when sharing personal information.
+       </li>
+      </ul>
+      <h6>
+       6. Data Retention
+      </h6>
+      <ul>
+       <li>
+        We retain personal data only as long as necessary for educational, administrative, and legal purposes. Retention periods vary depending on the nature of the data and regulatory requirements.
+       </li>
+      </ul>
+      <h6>
+       7. Your Rights
+      </h6>
+      Individuals have the following rights concerning their personal data:
+      <ul>
+       <li>
+        Access and Correction: Request access to and correction of personal information
+       </li>
+       <li>
+        Data Deletion: Request deletion of personal data where applicable.
+       </li>
+       <li>
+        Objection to Processing: Object to certain data processing activities.
+       </li>
+       <li>
+        Data Portability: Request a copy of personal data in a commonly used format.
+       </li>
+      </ul>
+      To exercise these rights, please contact us at info@silveroakuni.ac.in
+      <h6>
+       8. Cookies and Tracking Technologies
+      </h6>
+      <ul>
+       <li>
+        Our website may use cookies and similar technologies to enhance user experience. Users can manage cookie preferences through their browser settings.
+       </li>
+      </ul>
+      <h6>
+       9. Updates to This Policy
+      </h6>
+      <ul>
+       <li>
+        We may update this Privacy Policy periodically. Any changes will be updated at official university website.
+       </li>
+      </ul>
+      <h6>
+       10. Contact Information
+      </h6>
+      For any inquiries regarding these Terms &amp; Conditions, please contact:
+
+                Silver Oak University, Near Bhavik Publication, Opposite Sola Bhagwat Vidhyapith, S. G. Road, Gota, Ahmedabad - 382481
+      <br/>
+      Email: Info@silveroakuni.ac.in
+      <br/>
+      Contact No: +91 - 079 - 66046300
+      <br/>
+      Website: https://silveroakuni.ac.in/
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+ <script src="assets\jquery.min.js" type="text/javascript">
+ </script>
+ <script src="assets\bootstrap.min.js" type="text/javascript">
+ </script>
+ <script src="assets\select2.min.js" type="text/javascript">
+ </script>
+ <script src="assets\bootstrap-datepicker.min.js" type="text/javascript">
+ </script>
+ <script src="assets\slick.min.js" type="text/javascript">
+ </script>
+ <script src="assets\login.js" type="text/javascript">
+ </script>
+ <script src="assets\common.js" type="text/javascript">
+ </script>
+ <script src="assets\angular.js" type="text/javascript">
+ </script>
+ <script src="assets\Contant.js" type="text/javascript">
+ </script>
+ <script src="assets\ng-file-upload.js" type="text/javascript">
+ </script>
+ <script src="assets\chosen.jquery.min.js">
+ </script>
+ <script src="assets\angular-chosen.min.js">
+ </script>
+ <script src="assets\schoolAppV2.js" type="text/javascript">
+ </script>
+ <script src="assets\common.js" type="text/javascript">
+ </script>
+ <script src="assets\alasql.min.js">
+ </script>
+ <script src="assets\Lobibox.js">
+ </script>
+ <script src="assets\StudentLogin.js" type="text/javascript">
+ </script>
+ <script src="assets\angular-base64-upload.js">
+ </script>
+ <script type="text/javascript">
+  var RequestFailed = "Request failed";
+
+    $("input").attr("autocomplete", "off");
+ </script>
+ <script>
+  //function onSubmit(token) {
+    //    debugger
+    //    var scope = angular.element(document.querySelector('[ng-controller="StudentLoginController"]')).scope()
+    //    scope.$apply(function () {
+    //        scope.CaptchaToken = token
+
+    //        scope.VerifyTokenMethod();
+    //    })
+
+    //    //var scope = angular.element("CaptchaToken").scope();
+    //    //scope.name = token;
+    //    ///document.getElementById("demo-form").submit();
+    //}
+ </script>
+</html>

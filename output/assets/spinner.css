@@ -1,0 +1,104 @@
+﻿.preloader {
+    width: 100%;
+    height: 31px;
+    text-align: center;
+}
+/*https://codepen.io/jayeshvekariya/pen/yYbKgP*/
+
+.cssload-speeding-wheel {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    /*border: 2px solid rgba(97,100,193,0.98);*/
+    /*border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;*/
+    animation-name: cssload-spin !important;
+    animation-duration: 1s !important;
+    animation-timing-function: ease !important;
+    animation-iteration-count: infinite !important;
+    -webkit-animation-name: cssload-spin !important;
+    -webkit-animation-duration: 1s !important;
+    -webkit-animation-timing-function: ease !important;
+    -webkit-animation-iteration-count: infinite !important;
+    -moz-animation-name: cssload-spin !important;
+    -moz-animation-duration: 1s !important;
+    -moz-animation-timing-function: ease !important;
+    -moz-animation-iteration-count: infinite !important;
+    -o-animation-name: cssload-spin !important;
+    -o-animation-duration: 1s !important;
+    -o-animation-timing-function: ease !important;
+    -o-animation-iteration-count: infinite !important;
+    -ms-animation-name: cssload-spin !important;
+    -ms-animation-duration: 1s !important;
+    -ms-animation-timing-function: ease !important;
+    -ms-animation-iteration-count: infinite !important;
+}
+
+@keyframes cssload-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes cssload-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes cssload-spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes cssload-spin {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+
+    100% {
+        -o-transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes cssload-spin {
+    0% {
+        -ms-transform: rotate(0deg);
+    }
+
+    100% {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+
+.preloader {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 99999;
+    /*background: #fff*/
+}
+
+    .preloader .cssload-speeding-wheel {
+        position: absolute;
+        top: calc(50% - 3.5px);
+        left: calc(50% - 3.5px);
+        background: transparent url('../../images/microwebsolution_logo.png') center no-repeat;
+        background-size: contain;
+    }
