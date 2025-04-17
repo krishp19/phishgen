@@ -1,0 +1,2 @@
+(()=>{"use strict";class e extends HTMLElement{connectedCallback(){this.toggle.addEventListener("change",(()=>this.setInputType())),this.setInputType()}get toggle(){return this.querySelector(".password-toggle__toggle")}get input(){return this.querySelector(".password-toggle__input")}setInputType(){this.input.type=this.toggle.checked?"text":"password"}}customElements.get("lg-password-toggle")||customElements.define("lg-password-toggle",e)})();
+//# sourceMappingURL=password_toggle_component-e7551760.digested.js.map

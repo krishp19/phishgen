@@ -1,0 +1,1026 @@
+/* Default CSS Stylesheet for a new Web Application project */
+BODY
+{
+	margin-top: 0px;
+	/*background-image: url(../Images/Background.gif);*/
+	/*background-image:url(../Images/blue-bar.jpg);*/
+	margin-left: 0px;
+	background-repeat: no-repeat;
+	font-family: Verdana, Arial, MS Sans Serif;
+    FONT: 12px verdana,arial,helvetica,"sans-serif"; 
+	COLOR: #000000;
+}
+a:link
+{
+	color: navy;
+}
+a:visited 
+{
+	color: navy;
+}
+a:hover {
+    text-decoration: none;
+}
+
+a:active 
+{
+	color: navy;
+}
+.Alternate
+{
+	background-color: #ffffcc;
+}
+
+LEGEND {
+    font-weight: bold;
+    font-size: x-small;
+    font-family: Verdana, Arial;
+    background-color: transparent;
+}
+.clsColumnHeader
+{
+	font-family: Verdana; 
+	font-weight: bold;
+	background-color: #D9EDFF; 
+	color: #000000; 
+	text-align: Center
+}
+.Alternate
+{
+	background-color: #ffffcc;
+}
+TABLE
+{
+	border:0;
+	padding:0px, 0px, 0px, 0px;
+	background-color: transparent;
+	border-color:Gray;
+	border-collapse:collapse ;
+}
+
+.Menu
+{
+	text-decoration: none;
+	font-weight:bold;
+}
+
+.TopMenu
+{
+	border-right: thin outset;
+	padding-right: 2px;
+	border-top: thin outset;
+	padding-left: 2px;
+	font-weight: bold;
+	font-size: 10pt;
+	padding-bottom: 2px;
+	border-left: thin outset;
+	padding-top: 2px;
+	border-bottom: thin outset;
+	font-family: Verdana, Arial, MS Sans Serif;
+	border-collapse: collapse;
+	background-color: transparent;
+}
+
+TD
+{
+	font-size: 10pt;
+	margin: 4px;
+	color: #000000;
+	font-family: Verdana, Arial, MS Sans Serif;
+    }
+
+P
+{
+	margin-bottom:2px;
+	margin-top:2px;
+    FONT-SIZE: 10pt;
+    COLOR: #000000;
+	font-family: Verdana, Arial, MS Sans Serif;
+    height: 22px;
+}
+OL
+{
+	margin-top: 2px;
+	font-size: 10pt;
+	margin-bottom: 2px;
+	font-family: Verdana, Arial, MS Sans Serif;
+}
+LI
+{
+	margin-bottom:2px;
+	margin-top:2px;
+    FONT-SIZE: 10pt;
+    COLOR: #000000;
+	font-family: Verdana, Arial, MS Sans Serif;
+    text-align: left;
+}
+
+.formselect
+{
+	font-size: 10pt;
+	color: #000000;
+	text-align:left;
+	font-family: Verdana, Arial, MS Sans Serif;
+	color:Navy;
+	border-right: #639ace 1px solid;
+	border-top: gray 1px solid;
+	border-left: gray 1px solid;
+	border-bottom: #639ace 1px solid;
+	BACKGROUND-COLOR: #fff9e1
+}
+
+.TxtRightAlign
+{
+	font-size: 10pt;
+	color: #000000;
+	text-align:right;
+	font-family: Verdana, Arial, MS Sans Serif;
+	border-right: #639ace 1px solid;
+	border-top: gray 1px solid;
+	border-left: gray 1px solid;
+	border-bottom: #639ace 1px solid;
+}
+
+
+blockquote p {
+  display: inline;
+}
+
+.TxtTotal
+{
+	font-size: 10pt;
+	font-weight:bold;
+	color: #000000;
+	text-align:right;
+	border-right: white 1px ;
+	border-top: white 1px ;
+	border-left: white 1px solid;
+	border-bottom: white 1px solid;
+	font-family: Verdana, Arial, MS Sans Serif;		 
+}
+
+OPTION
+{
+	font-size: 10pt;
+	color: #000000;
+	font-family: Verdana, Arial, MS Sans Serif;
+	border-right: #639ace 1px solid;
+	border-top: gray 1px solid;
+	border-left: gray 1px solid;
+	border-bottom: #639ace 1px solid;
+}
+
+TEXTAREA
+{
+	font-size: 10pt;
+	color: #000000;
+	font-family: Verdana, Arial, MS Sans Serif;
+	border-right: #639ace 1px solid;
+	border-top: gray 1px solid;
+	border-left: gray 1px solid;
+	border-bottom: #639ace 1px solid;
+}
+
+h2 {
+    margin-top: 2px;
+    font-weight: bolder;
+    font-size: 12pt;
+    margin-bottom: 2px;
+    color: #003366;
+    font-family: Verdana, Arial, MS Sans Serif;
+}
+
+h3
+{
+	margin-top: 0px;
+	font-weight: bolder;
+	font-size: 10pt;
+	margin-bottom: 2px;
+	color: #a52a2a;
+	font-family: Verdana, Arial, MS Sans Serif;
+}
+
+
+
+.nounderline {
+color: #DAA520;
+text-decoration: none;
+font-family:Webdings ;
+font-size:14pt;
+
+}
+
+
+
+.PageHeader
+{
+	font-weight: bolder;
+	font-size: 14pt;
+	color: #a52a2a;
+	font-family: Verdana, Arial, MS Sans Serif;
+	height: 21px;
+}
+
+.combo
+{
+    FONT-SIZE: 10pt;
+    COLOR: #000000;
+    HEIGHT: 20px;
+    BACKGROUND-COLOR: #FFFFFF;
+    TEXT-ALIGN: left;
+    FONT-FAMILY: Verdana, Arial, MS Sans Serif;
+}
+
+/*Use it for Labels to display field values on the screen (i.e. read only fields)*/
+.label
+{
+	font-weight: bolder;
+	font-size: 10pt;
+	background: none transparent scroll repeat 0% 0%;
+	font-family: Verdana, Arial, MS Sans Serif;
+	text-align: left;
+}
+
+.ReadTextbox
+{
+	border-right: #639ace 1px solid;
+	border-top: gray 1px solid;
+	font-size: 10pt;
+	background: #eaebeb;
+	border-left: gray 1px solid;
+	color: gray;
+	border-bottom: #639ace 1px solid;
+	font-family: Verdana, Arial, MS Sans Serif;
+	text-align: right;
+}
+
+/*Use it for Labels where warning/confirmation messgaes needs to be displayed*/
+.error
+{
+	font-weight: normal;
+	font-size: 10pt;
+	background: none transparent scroll repeat 0% 0%;
+	color: #ff3333;
+	font-family: Verdana, Arial, MS Sans Serif;
+	text-align: center;
+}
+
+/*Use it for Labels where warning/confirmation messgaes needs to be displayed*/
+.message
+{
+	font-weight: bold;
+	font-size: 10pt;
+	background: none transparent scroll repeat 0% 0%;
+	color: #0000cd;
+	font-family: Verdana, Arial, MS Sans Serif;
+	text-align: center;
+}
+
+.button {
+    background-color: #053246; /* Blue */
+    border: none;
+    color: white;
+    box-shadow: 2px 3px 4px #888888;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 80px;
+    height: 25px;
+}
+
+    .button:hover {
+        background-color: #3e8e41
+    }
+
+    .button:active {
+        background-color: #053246;
+        box-shadow: 5px 10px 8px #888888;
+        transform: translateY(4px);
+    }
+
+.calendar
+{
+	border-right: #639ace 1px solid;
+	border-top: gray 1px solid;
+	font-size: 10pt;
+	border-left: gray 1px solid;
+	width: 17px;
+	color: maroon;
+	border-bottom: #639ace 1px solid;
+	font-family: Webdings;
+	height: 17px;
+	background-color: #fff0b3;
+}
+
+.ColumnHeader
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: #000000;
+	font-family: Verdana, Arial, MS Sans Serif;
+	background-color: #d9edff;
+}
+
+.SideHeader
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: #000000;
+	font-family: Verdana, Arial, MS Sans Serif;
+	background-color: #d9edff;
+	text-align: right;
+}
+.ActiveTab
+{
+	border-right: blue 1px solid;
+	border-top: blue 1px solid;
+	font-weight: bold;
+	font-size: 10pt;
+	border-left: blue 1px solid;
+	color: navy;
+	border-bottom: none;
+	font-family: Verdana;
+	background-color: transparent;
+}
+
+.BlankTab
+{
+	border-right: none;
+	border-top: none;
+	font-weight: bold;
+	font-size: 10pt;
+	border-left: none;
+	color: navy;
+	border-bottom: blue 1px solid;
+	font-family: Verdana;
+	background-color: transparent;
+}
+
+.InactiveTab
+{
+	border-right: blue 1px solid;
+	border-top: blue 1px solid;
+	font-weight: bold;
+	font-size: 10pt;
+	border-left: blue 1px solid;
+	color: navy;
+	border-bottom: blue 1px solid;
+	font-family: Verdana;
+	background-color: #ffffcc;
+}
+
+.TabPage
+{
+	border-right: blue 1px solid;
+	border-top: none;
+	border-left: blue 1px solid;
+	color: navy;
+	border-bottom: blue 1px solid;
+	font-family: Verdana;
+	background-color: transparent;
+}
+
+.SummaryTotal
+{
+	font-weight:bold;
+	background-color: #ffffcc;
+}
+
+.ErrorMessage
+{
+	color: blue;
+	font-weight: bold;
+}
+
+/*User Provisioning Styles*/
+
+form
+{
+	FONT: 10px verdana,arial,helvetica,"sans-serif"; 
+	COLOR: #000000;
+}
+
+.up_window_header
+{
+	background-color: Navy;
+}
+.up_section_header{
+background-color: #6B9ED5;
+}
+
+.up_sub_section_header
+{
+	background-color: #BED2ED;
+}
+.up_section_header_text{
+color: #FFFFFF; 
+font: 12px verdana,arial,helvetica,"sans-serif"; 
+text-decoration: none;
+font-weight: bold;
+}
+.nav_table td
+{
+	width: 25px;
+	padding: 2px 5px 2px 5px; 
+	text-align:center;
+	vertical-align: top;	
+}
+.up_label{
+color: #000000; 
+text-decoration: none;
+font-weight: bold;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 10px;
+    line-height: normal;
+    font-family: verdana, arial, helvetica, sans-serif;
+    text-align: right;
+}
+.up_labelColor{
+color: #0000FF; 
+font: 10px verdana,arial,helvetica,"sans-serif"; 
+text-decoration: none;
+font-weight: bold;
+}
+.up_text{
+color: #000000; 
+font: 10px verdana,arial,helvetica,"sans-serif"; 
+text-decoration: none;
+}
+up_instructions{
+text-align: right;
+}
+
+.up_select_inst_cat
+{
+	width: 250px;
+	height: 150px;
+}
+
+.up_banHeaderText {
+color: #FFFFFF; 
+font: 12px verdana,arial,helvetica,"sans-serif"; 
+font-weight: bold;
+text-decoration: none;
+white-space:nowrap;
+}
+
+.menuWrapper {
+    text-align:center;
+}
+
+select{
+font: 10px verdana,arial,helvetica,"sans-serif"; 
+text-decoration: none;
+}
+
+input{
+font: 10px verdana,arial,helvetica,"sans-serif"; 
+text-decoration: none;
+}
+
+.up_group_admin_btn
+{
+	width: 150px;
+}
+
+.up_txt_wide
+{
+	width: 100%;
+	height: 150px;
+}
+
+.up_datagrid_wide{
+width: 90%;
+}
+
+.up_datagrid_narrow{
+width: 50%;
+}
+
+.up_datagrid_left{
+width: 100%;
+}
+
+.up_datagrid_wide td{
+font: 10px verdana,arial,helvetica,"sans-serif";
+padding: 3px 5px 3px 5px;
+text-align:left;
+}
+
+.up_datagrid_narrow td{
+font: 10px verdana,arial,helvetica,"sans-serif";
+padding: 3px 5px 3px 5px; 
+text-align:left;
+}
+
+.up_datagrid_left td{
+font: 10px verdana,arial,helvetica,"sans-serif";
+padding: 3px 5px 3px 5px; 
+text-align:left;
+}
+
+.up_datagrid_header
+{
+	font: 12px verdana,arial,helvetica,"sans-serif";
+    font-weight: bold;
+    background-color: #17406e;
+    color: White;
+	text-decoration: none;
+}
+
+.up_datagrid_header td
+{
+	font: 12px verdana,arial,helvetica,"sans-serif";
+    font-weight: bold;
+    background-color: #17406e;
+    color: White;
+	text-decoration: none;
+}
+
+.up_datagrid_header a
+{
+	font: 12px verdana,arial,helvetica,"sans-serif";
+	font-weight: bold;
+	text-decoration: underline;
+	color: White;
+}
+
+.up_datagrid_header a:hover{
+color: #FFFFFF; 
+font: 12px verdana,arial,helvetica,"sans-serif"; 
+font-weight: bold;
+text-decoration: underline;
+}
+
+.up_banHeaderText a:visited{
+color: #FFFFFF; 
+font: 12px verdana,arial,helvetica,"sans-serif"; 
+font-weight: bold;
+text-decoration: underline;
+}
+
+.up_datagrid_gridItem {
+background-color: #FFFFFF;
+}
+
+.up_datagrid_gridAltItem {
+background-color: #eeeee0;
+}
+
+.up_email
+{
+	width:200px;
+}
+
+.up_first_name
+{
+width:181px;
+}
+
+.up_last_name
+{
+width:181px;
+}
+
+.up_suffix
+{
+width:53px;
+}
+
+.up_address
+{
+width:344px;
+}
+
+.up_city
+{
+width:296px;
+}
+
+.up_zip
+{
+width:90px;
+}
+
+.up_area_code
+{
+width:40px;
+}
+
+.up_phone_1
+{
+width:40px;
+}
+
+.up_phone_2
+{
+width:56px;
+}
+
+.up_phone_ext
+{
+width:64px;
+}
+
+.up_description
+{
+	width:450px;
+	height:80px;
+}
+
+.up_groupname
+{
+	width:280px;
+}
+
+
+
+.primaryStaticMenu
+{
+   background-color: transparent;
+   float: right;
+}
+.primaryStaticMenuItem
+{
+   width: 10em;
+   background-color: #f7f2ea; 
+   border-width: 1px;
+   border-color: #efefef #aaab9c #ccc #efefef; 
+   border-style: solid;
+   color: #777777;
+   padding: 0.5em 0 0.5em 1em;
+}
+.primaryStaticHover
+{
+   color: #800000;
+   background: #f0e7d7;
+}
+
+.primaryDynamicMenu
+{   
+   background-color: #f7f2ea;               
+   border-bottom: solid 1px #ccc;    
+}  
+.primaryDynamicMenuItem
+{
+   width: 10em;
+   background-color: #f7f2ea; 
+   color: #777;
+   padding: 0.5em 0 0.5em 1em;
+   border-width: 1px;
+   border-color: #f7f2ea #aaab9c #f7f2ea #efefef;  
+   border-style: solid;         
+}    
+.primaryDynamicHover
+{
+   color: #800000;
+   background: #f0e7d7;
+}            
+
+.secondaryLevelOne
+{
+   background-color: transparent;
+   background-repeat: repeat-x;
+   margin: 1.5em 0 0 0;
+   padding: 5px 0 0 5px;
+   width: 12em; 
+   height: 35px;
+}
+.secondaryLevelTwo
+{
+   background: #FAFBFB;
+   padding: 5px 0 5px 5px;         
+}
+.secondaryStaticHover
+{
+   color: #800000;
+}
+
+
+
+/*MyApps Styles*/
+.myapps_section_header
+{	
+	background-color: #6B9ED5;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:5px;
+	padding-right:5px;
+	font: 12px verdana,arial,helvetica,"sans-serif"; 
+	text-decoration: none;
+	font-weight: bold;
+	color:White;
+	
+}
+
+.myapps_select_section_header
+{	
+	background-color: #6B9ED5;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:7px;
+	padding-right:50px;
+	font: 12px verdana,arial,helvetica,"sans-serif"; 
+	text-decoration: none;
+	font-weight: bold;
+	color:White;
+	
+}
+
+.myapps_section_header_text{
+	color: #FFFFFF; 
+	font: 12px verdana,arial,helvetica,"sans-serif"; 
+	text-decoration: none;
+	font-weight: bold;
+}
+.nav_table td
+{
+	width: 25px;
+	padding: 2px 5px 2px 5px; 
+	text-align:center;
+	vertical-align: top;	
+}
+
+.myapps_label{
+	color: #000000; 
+	font: 11px verdana,arial,helvetica,"sans-serif"; 
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.myapps_text{
+	color: #000000; 
+	text-decoration: none;
+	font-weight: 500;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 12px;
+    line-height: normal;
+    font-family: verdana, arial, helvetica, sans-serif;
+    text-align: center;
+}
+.myapps_text2{
+	color: #000000; 
+	text-decoration: none;
+	font-weight: 500;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 12px;
+    line-height: normal;
+    font-family: verdana, arial, helvetica, sans-serif;
+    text-align: left;
+}
+
+.myapps_text_left{
+	color: #000000; 
+	font: 12px verdana,arial,helvetica,"sans-serif"; 
+	text-decoration: none;
+	font-weight: 500;
+	padding-left:30px;
+}
+
+.myapps_help_section_text{
+	text-align: right;	
+	font: 14px verdana,arial,helvetica,"sans-serif";
+    color:#006699;
+    text-decoration:none;
+	font-weight:900; 
+}
+
+.myapps_help_section_text a {
+	text-align: right;	
+	font: 14px verdana,arial,helvetica,"sans-serif";
+    color:#006699;
+    text-decoration:none; 
+	font-weight:900; 
+}
+
+.myapps_help_section_text a:visited {
+	text-align: right;	
+	font: 14px verdana,arial,helvetica,"sans-serif";
+    color:#006699;
+    text-decoration:none;
+	font-weight:900; 
+}
+
+.myapps_banHeaderText {
+	color: #FFFFFF; 
+	font: 12px verdana,arial,helvetica,"sans-serif"; 
+	font-weight: bold;
+	text-decoration: none;
+	white-space:nowrap;
+}
+
+select
+{	
+	font: 10px verdana,arial,helvetica,"sans-serif"; 
+	text-decoration: none;
+}
+
+input
+{
+	font: 10px verdana,arial,helvetica,"sans-serif"; 
+	text-decoration: none;
+    height: 20px;
+}
+
+.myapps_datagrid_wide{
+	width: 19%;
+	border-spacing: 0px;
+	border-collapse: collapse;
+
+
+}
+
+.myapps_datagrid_narrow{
+	width: 50%;
+	border-color: #000000;
+	border-width: thin;
+	border-style: solid;
+}
+
+.myapps_datagrid_wide td{
+	font: 10px verdana,arial,helvetica,"sans-serif";
+	padding: 3px 5px 3px 5px;
+	text-align:left;
+	border-color: #000000;
+	border-width: 1px;
+	border-style: solid;
+	border-spacing: 0px;
+
+}
+
+.myapps_datagrid_narrow td{
+	font: 10px verdana,arial,helvetica,"sans-serif";
+	padding: 3px 5px 3px 5px; 
+	text-align:left;
+}
+
+.myapps_datagrid_header
+{
+	font: 12px verdana,arial,helvetica,"sans-serif";
+    font-weight: bold;
+    background-color: #17406e;
+    color: White;
+	text-decoration: none;
+	right:25px;
+}
+
+.myapps_link
+{
+	font: 12px verdana,arial,helvetica,"sans-serif";
+    font-weight: bold;
+    color:#003366;
+	text-decoration: underline;
+	right:25px;
+}
+
+.myapps_link a:visited
+{
+	font: 12px verdana,arial,helvetica,"sans-serif";
+    font-weight: bold;
+    color:#003366;
+	text-decoration: underline;
+	right:25px;
+}
+
+.myapps_datagrid_header td
+{
+	font: 12px verdana,arial,helvetica,"sans-serif";
+    font-weight: bold;
+    background-color: #17406e;
+    color: White;
+	text-decoration: none;
+	padding: 3px 5px 3px 5px;
+	text-align:left;
+
+}
+
+.myapps_datagrid_header a
+{
+	font: 12px verdana,arial,helvetica,"sans-serif";
+	font-weight: bold;
+	text-decoration: underline;
+	color: White;
+	padding: 3px 5px 3px 5px;
+	text-align:left;
+}
+
+.myapps_datagrid_header a:hover{
+	color: #FFFFFF; 
+	font: 12px verdana,arial,helvetica,"sans-serif"; 
+	font-weight: bold;
+	text-decoration: underline;
+	padding: 3px 5px 3px 5px;
+	text-align:left;
+}
+
+.myapps_banHeaderText a:visited{
+	color: #FFFFFF; 
+	font: 12px verdana,arial,helvetica,"sans-serif"; 
+	font-weight: bold;
+	text-decoration: underline;
+	padding: 3px 5px 3px 5px;
+	text-align:left;
+}
+
+.myapps_datagrid_gridItem {
+	background-color: #FFFFFF;
+	font: 10px verdana,arial,helvetica,"sans-serif"; 
+	padding: 3px 5px 3px 5px;
+	text-align:left;
+
+}
+
+.alternate {
+    background-color: #eeeee0;
+	font: 10px verdana,arial,helvetica,"sans-serif"; 
+	padding: 3px 5px 3px 5px;
+	text-align:left; 
+}
+
+.myapps_datagrid_gridAltItem {
+	background-color: #eeeee0;
+	font: 10px verdana,arial,helvetica,"sans-serif"; 
+	padding: 3px 5px 3px 5px;
+	text-align:left; 
+
+}
+
+.myapps_title_text 
+{
+	font-family:Arial;
+	font-size:12pt;
+	font-weight:900;
+    text-align: center;
+}
+
+.myapps_title_text_left 
+{
+	font: 14px verdana,arial,helvetica,"sans-serif"; font-family:Arial;
+	font-weight: bold;
+}
+
+.myapps_urltxt
+{
+	width:232px;
+}
+
+.myapps_quicklch
+{
+	background-color: #173F6E;
+	height: 50px;
+	width:100%;
+}
+
+.myapps_quicklch_drp
+{
+	width:152px;
+
+}
+
+.myapps_unavail_mess
+{
+	height: 120px;
+	width: 380px;
+}
+
+
+/* CSS Document */
+
+.columnOne {
+	background-color: #FFFFFF;
+}
+
+
+
+/*ED DIR SEARCH Styles*/
+
+div.checkboxlist ul li { margin: 7px 0px; }
+div.checkboxlist ul li input { width: 15px; display: block; float:left;}
+div.checkboxlist ul li label { padding-left: 28px; display: block; }
+div.checkboxlist ul li div { margin-left: 28px; clear: both; font-size: .9em; }
+div.checkboxlist ul li { list-style-type: none;}
+
+
+.breadcrum {
+    color: #f00;
+    font-family: Verdana;
+}
+
+.rightAlign {
+    color: blue;
+    line-height: 150%;
+    font-weight: bold;
+    font-size: small;
+    vertical-align: text-bottom;
+    font-family: Verdana;
+    text-align: right;
+}
+        .auto-style1 {
+            color: #000080;
+        }

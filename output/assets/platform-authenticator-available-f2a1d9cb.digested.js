@@ -1,0 +1,2 @@
+(()=>{"use strict";!async function(){const t=document.getElementById("platform_authenticator_available");(function(){const t=navigator.userAgent.match(/iPhone; CPU iPhone OS (\d+)_/),e=t&&Number(t[1]);return!!e&&e>=16}()||function(){const t=navigator.userAgent.match(/; Android (\d+)/),e=t&&Number(t[1]);return!!e&&e>=9&&navigator.userAgent.includes(" Chrome/")}())&&await(async()=>!!await(window.PublicKeyCredential?.isUserVerifyingPlatformAuthenticatorAvailable()))()&&(t.value="true")}()})();
+//# sourceMappingURL=platform-authenticator-available-f2a1d9cb.digested.js.map

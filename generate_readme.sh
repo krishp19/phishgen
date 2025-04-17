@@ -1,4 +1,8 @@
+#!/bin/bash
 
+# Phishing Page Generator - README.md Generator Script
+
+README_CONTENT="
 # 🎣 Phishing Page Generator (For Educational Use Only)
 
 > **DISCLAIMER:** This tool is strictly for **educational**, **cybersecurity research**, and **awareness training** purposes **only**. Do **NOT** use it on any website without **explicit permission**. The author is not responsible for any misuse.
@@ -15,7 +19,7 @@ This tool allows you to **clone a public login page** (e.g., Facebook, Instagram
 
 - ✅ Clone login page HTML, CSS, and JavaScript
 - ✅ Rewrite form actions to a **local credential listener**
-- ✅ Download and store external assets into 
+- ✅ Download and store external assets into `assets/`
 - ✅ Simulate credential harvesting with a **Flask server**
 - ✅ Fully offline and local use – ideal for **phishing awareness training**
 
@@ -25,36 +29,36 @@ This tool allows you to **clone a public login page** (e.g., Facebook, Instagram
 
 ### 1. 📦 Install Dependencies
 
-```bash
+\`\`\`bash
 pip install -r requirements.txt
-```
+\`\`\`
 
 ---
 
 ### 2. 🛠 Generate a Phishing Page
 
-```bash
+\`\`\`bash
 python generate.py --url https://example.com/login
-```
+\`\`\`
 
 #### 📂 Output Structure:
-```
+\`\`\`
 output/
 ├── index.html         # Cloned login page (offline)
 ├── server.py          # Flask server to capture credentials
 └── assets/            # CSS, JS, images downloaded locally
-```
+\`\`\`
 
 ---
 
 ### 3. ▶️ Simulate Phishing Locally
 
-```bash
+\`\`\`bash
 cd output
 python server.py
-```
+\`\`\`
 
-- Open `index.html` in your browser
+- Open \`index.html\` in your browser
 - Submit dummy credentials
 - View captured data in the terminal
 
@@ -63,12 +67,12 @@ python server.py
 ## 🔧 Configuration Options
 
 ### CLI Flags:
-- `--url` – URL of the login page to clone
-- `--output` – Output directory (default: `output`)
+- \`--url\` – URL of the login page to clone
+- \`--output\` – Output directory (default: \`output\`)
 
 ### Code Customization:
-- `TARGET_ACTION` in `generate.py` – Customize the form action rewrite
-- `LISTENER_SCRIPT` in `server.py` – Adjust logging or save method for submitted credentials
+- \`TARGET_ACTION\` in \`generate.py\` – Customize the form action rewrite
+- \`LISTENER_SCRIPT\` in \`server.py\` – Adjust logging or save method for submitted credentials
 
 ---
 
@@ -96,4 +100,10 @@ Cybersecurity Enthusiast & Full-Stack Developer
 ---
 
 > ⭐ If you find this helpful for your studies or awareness efforts, consider giving credit and promoting ethical cybersecurity education.
+"
 
+# Output the README content into a file
+echo "$README_CONTENT" > README.md
+
+# Notify user
+echo "README.md has been generated successfully!"

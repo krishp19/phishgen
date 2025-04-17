@@ -1,0 +1,1 @@
+_locale_data=Object.assign({"datetime.dotiw.minutes":{one:"1 minute",other:"%{count} minutes"},"datetime.dotiw.seconds":{one:"1 second",other:"%{count} seconds"},"datetime.dotiw.two_words_connector":" and "},this._locale_data);

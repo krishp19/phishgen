@@ -1,0 +1,2 @@
+(()=>{"use strict";class s extends HTMLElement{connectedCallback(){this.addEventListener("click",this.#s)}show(){this.#e.open||(this.ownerDocument.body.classList.add("usa-js-modal--active"),this.#e.showModal())}hide(){this.ownerDocument.body.classList.remove("usa-js-modal--active"),this.#e.close()}get#e(){return this.querySelector("dialog")}#s=s=>{s.target instanceof HTMLButtonElement&&"dismiss"in s.target.dataset&&this.hide()}}customElements.get("lg-modal")||customElements.define("lg-modal",s)})();
+//# sourceMappingURL=modal_component-536d8900.digested.js.map
